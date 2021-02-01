@@ -1,0 +1,50 @@
+.main{
+    background-color: grey;
+    width: 100% !important;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .game-box{
+        width: 50vw;
+        height:70vh;
+       // background-color: hotpink;
+        display: inherit;
+        .game{
+            table{
+                width:20vw;
+                height: 20vw;
+               // border-collapse: collapse;
+               // border-style: none;
+               // border: 2px red solid;
+                tr {
+
+                    td{
+                        border:inherit;
+                        width: calc(20vw / 3);
+                        height: calc(20vw / 3);
+                        &:first-child{
+                            border-left: hidden;
+                        }
+                        &:last-child{
+                            border-right:hidden ;
+                        }
+                    }
+                   // border: inherit;
+                // border-collapse: collapse;
+                 border: 4px solid pink;
+                    &:first-child{
+                        border-top: hidden;
+
+                    }
+                    &:last-child{
+                        border-bottom: hidden;
+                    }
+                
+             }
+            }
+            
+               
+        }
+    }
+}
