@@ -17,8 +17,9 @@ export class GameComponent implements OnInit {
     this.matrice=document.querySelectorAll('.case');
     for (let val of this.matrice) {
       val.addEventListener('click',(e)=>{
-        console.log('click');
-
+        console.log('click'+val.cellIndex);
+        val.innerHTML="";
+val.innerHTML += "O";
       });
       //console.log(val); // prints values: 10, 20, 30, 40
     }

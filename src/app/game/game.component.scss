@@ -12,6 +12,10 @@
         tr {
 
             td{
+                text-align: center;
+                font-size: 5vw;
+                cursor: pointer;
+                color: whitesmoke;
                 border:inherit;
                 width: calc( #{$tableWidth} / 3);
                 height: calc( #{$tableWidth} / 3);
