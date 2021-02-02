@@ -1,0 +1,38 @@
+.game{
+    margin-top: 20px;
+    width:100%;
+    display: flex;
+    justify-content: center;
+    table{
+        $tableWidth:25vw;
+        
+        width:$tableWidth;
+        height: $tableWidth;
+   
+        tr {
+
+            td{
+                border:inherit;
+                width: calc( #{$tableWidth} / 3);
+                height: calc( #{$tableWidth} / 3);
+                &:first-child{
+                    border-left: hidden;
+                }
+                &:last-child{
+                    border-right:hidden ;
+                }
+            }
+         border: 5px solid white;
+            &:first-child{
+                border-top: hidden;
+
+            }
+            &:last-child{
+                border-bottom: hidden;
+            }
+        
+     }
+    }
+    
+       
+}
