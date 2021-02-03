@@ -7,8 +7,8 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'morpion';
-  test(){
-    console.log("mety");
+  test(val){
+    console.log(val.checked);
   }
   
 }

@@ -16,12 +16,20 @@
        // background-color: yellow;
         .first-box{
            width:100%;
-         //  background-color: blue;
+           //background-color: blue;
            display:flex ;
-           //justify-content: space-evenly;
-           align-items: center;
+          justify-content: flex-end;
+          // align-items: flex-end;
            .form-check{
-               margin-left:30px;
+               //margin-left:30px;
+              // margin-right: 0;
+             // background-color: burlywood;
+             //  position: relative;
+             input{
+                cursor: pointer;
+             }
+            
+               right: 0 !important;
                .form-check-label{
                    color: white;
                }
@@ -46,7 +54,24 @@
                 p{ 
                   margin: 0;
                   color: white;
-                  font-family: Arial, Helvetica, sans-serif;
+                  //font-family: Arial, Helvetica, sans-serif;
+                  //font-weight: bold;
+                  font-size: 20px;
+                }
+            }
+            .player1{
+                border-bottom: greenyellow 3px solid;
+                p{
+                    span{
+                        color: #20c997;
+                    }
+                }
+            }
+            .player2{
+ p{
+                    span{
+                        color:#0dcaf0;
+                    }
                 }
             }
             
