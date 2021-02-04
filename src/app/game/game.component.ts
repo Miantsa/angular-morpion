@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
 //import { table } from 'console';
 
 @Component({
@@ -17,14 +17,23 @@ export class GameComponent implements OnInit {
   O:number =-1;
   turn: number = this.X;
   obj = { '1': 'X', '-1':'O' };
-  constructor() { }
+  @Output() childToParent = new EventEmitter<String>();
+  constructor() { 
+   
+
+  }
 
   ngOnInit(): void {
+    
+
     this.matrice = document.querySelectorAll('.case');
+   
     this.matrice = Array.from(this.matrice);
     console.log(this.matrice)
     while (this.matrice.length) this.matrice2D.push(this.matrice.splice(0, 3));
     console.log(this.matrice2D);
+
+    this.sendToParent(this.turn);
     for (let i = 0; i < this.matrice2D.length; i++) {
 
       for (let j = 0; j < this.matrice2D[i].length; j++) {
@@ -34,8 +43,10 @@ export class GameComponent implements OnInit {
           console.log(val.innerHTML.length)
          // val.innerHTML+="X";
           if(val.innerHTML.length==0){
+           
             val.innerHTML=this.obj[this.turn+''];
             this.turn=-this.turn;
+            this.sendToParent(this.turn);
           }
          
           this.changeCaseColor(val);
@@ -64,4 +75,7 @@ export class GameComponent implements OnInit {
   vsIa() {
 
   }
+  sendToParent(turn){
+    this.childToParent.emit(turn);
+    }
 }
