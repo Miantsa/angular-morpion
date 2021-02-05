@@ -18,9 +18,17 @@
     <div class="third-box">
 
     </div>
-    <app-game (childToParent)="childToParent($event)"></app-game>
+    <app-game (childToParent)="childToParent($event)" (childToParent2)="childToParent2($event)" (childToParent3)="childToParent3($event)"></app-game>
     <div class="fourth-box">
      <span>Replay</span> 
     </div>
+  </div>
+  <div class="modals">
+    <div class="modals-content">
+      <p>{{winnerInfo}}</p>
+    
+    <img src="assets/replay.png" alt=""(click)="replay()" >
+    </div>
+    
   </div>
 </div>
