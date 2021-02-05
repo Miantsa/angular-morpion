@@ -9,6 +9,7 @@ export class AppComponent implements OnInit {
   title = 'morpion';
   player1Title:any;
   player2Title:any;
+  player2Option:any;
   modals:any;
   winnerInfo:String="Win !";
   obj = { '1': 'Player 1', '-1': 'Player 2' };
@@ -16,15 +17,20 @@ export class AppComponent implements OnInit {
   ngOnInit():void{
     this.player1Title=document.querySelector('.player1');
     this.player2Title=document.querySelector('.player2');
+    this.player2Option=document.querySelector('.player2Option');
     this.modals=document.querySelector('.modals');
   }
-  test(val){
+  gameOption(val){
     if(val.checked){
-
+this.player2Option.innerHTML= "AI : <span>O</span>";
+this.player2Option.querySelector('span').style.color="#0dcaf0";
+this.player2Option.querySelector('span').style.fontFamily="cursive";
     }else{
-
+      this.player2Option.innerHTML= "Player 2 : <span>O</span>";
+      this.player2Option.querySelector('span').style.color="#0dcaf0";
+      this.player2Option.querySelector('span').style.fontFamily="cursive";
     }
-    console.log(val.checked);
+    //console.log(val.checked);
   }
   childToParent(value){
     const borderStyle="greenyellow 1px solid";

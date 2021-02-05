@@ -84,8 +84,10 @@
                     span {
                         color: #0dcaf0;
                         font-family: cursive;
+                        
                     }
                 }
+               
             }
 
         }
@@ -111,16 +113,9 @@
 
             span {
                 color: white;
-                //display:block;
-                /* display: flex;
-                align-items: center;
-                justify-content: center;*/
+               
                 font-size: 25px;
                 font-weight: bold;
-                //background-color: gold;
-
-
-                // height: 100%;
                 cursor: pointer;
             }
         }

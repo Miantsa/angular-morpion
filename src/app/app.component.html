@@ -3,7 +3,7 @@
     <div class="first-box">
       <!--button type="button" class="btn btn-secondary btn-sm dropdown-toggle">Medium</button-->
       <div class="form-check form-switch">
-        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" [checked]=false (change)="test($event.target)">
+        <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" [checked]=false (change)="gameOption($event.target)">
         <label class="form-check-label" for="flexSwitchCheckChecked">Versus AI</label>
       </div>
     </div>
@@ -12,7 +12,7 @@
         <p>Player 1: <span>X</span> </p>
       </div>
       <div class="player2">
-        <p>Player 2: <span>O</span> </p>
+        <p class="player2Option" >Player 2:   <span>O</span></p>
       </div>
     </div>
     <div class="third-box">
