@@ -2,10 +2,10 @@
   <div class="game-box">
     <div class="first-box">
       <!--button type="button" class="btn btn-secondary btn-sm dropdown-toggle">Medium</button-->
-      <div class="form-check form-switch">
+      <!--div class="form-check form-switch">
         <input class="form-check-input" type="checkbox" id="flexSwitchCheckChecked" [checked]=false (change)="gameOption($event.target)">
         <label class="form-check-label" for="flexSwitchCheckChecked">Versus AI</label>
-      </div>
+      </div-->
     </div>
     <div class="second-box">
       <div class="player1">
@@ -18,15 +18,14 @@
     <div class="third-box">
 
     </div>
-    <app-game (childToParent)="childToParent($event)" (childToParent2)="childToParent2($event)" (childToParent3)="childToParent3($event)"></app-game>
+    <app-game [childMessage]="gameIA" [turn]="caseTurn" (childToParent)="childToParent($event)" (childToParent2)="childToParent2($event)" (childToParent3)="childToParent3($event)"></app-game>
     <div class="fourth-box">
-     <span>Replay</span> 
+     <span (click)="replay()">Replay</span> 
     </div>
   </div>
   <div class="modals">
     <div class="modals-content">
-      <p>{{winnerInfo}}</p>
-    
+      <p>{{winnerInfo}}</p> 
     <img src="assets/replay.png" alt=""(click)="replay()" >
     </div>
     

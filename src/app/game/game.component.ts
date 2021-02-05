@@ -1,4 +1,4 @@
-import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 //import { table } from 'console';
 
 @Component({
@@ -12,12 +12,14 @@ export class GameComponent implements OnInit {
   matrix2D = [];
   X: number = 1;
   O: number = -1;
-  turn: number = this.X;
+//  turn: number = this.X;
   obj = { '1': 'X', '-1': 'O' };
   //share data to app.component
   @Output() childToParent = new EventEmitter<String>();
   @Output() childToParent2 = new EventEmitter<String>();
   @Output() childToParent3 = new EventEmitter<String>();
+  @Input() childMessage: string;
+  @Input() turn: number=this.X;
   constructor() {
 
 
@@ -58,11 +60,12 @@ export class GameComponent implements OnInit {
             }
 
             this.changeCaseColor(val);
+            console.log("IA:" +this.childMessage);
           }
         });
       }
     }
-
+    
   }
   addToken(value) {
     const nb = this.matrix.length;
